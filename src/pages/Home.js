@@ -5,7 +5,6 @@ import imagen from "../img/profile.jpg";
 
 // Logos
 import logoHtml from "../img/logos/icono_html.jpg";
-import logoBootstrap from "../img/logos/icono_bootstrap.png";
 import logoCss from "../img/logos/icono_css.svg";
 import logoExpress from "../img/logos/icono_express.png";
 import logoMongo from "../img/logos/icono_mongo.png";
@@ -24,7 +23,7 @@ const Index = () => {
   return (
     <Fragment>
       <header className="hero" id="start">
-        <div className="header-content responsive-flex-column">
+        <div className="header-content">
           <img src={imagen} alt="Imagén de perfil" className="img" />
 
           <div className="info-profile">
@@ -66,27 +65,27 @@ const Index = () => {
                   <h3>Tecnologías principales</h3>
 
                   <div className="grid-skills responsive-flex-column">
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoHtml} alt="Icono de HTML5" />
                       <p>HTML5</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoCss} alt="Icono de CSS3" />
                       <p>CSS3</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoSass} alt="Icono de SASS" />
                       <p>SASS</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoJs} alt="Icono de JavaScript" />
                       <p>JavaScript</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoReact} alt="Icono de React" />
                       <p>React</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoRedux} alt="Icono de Redux" />
                       <p>Redux</p>
                     </div>
@@ -97,35 +96,31 @@ const Index = () => {
                   <h3>Tecnologías adicionales</h3>
 
                   <div className="grid-skills responsive-flex-column">
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoNode} alt="Icono de Node" />
                       <p>NodeJS</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoExpress} alt="Icono de Express" />
                       <p>Express</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoMongo} alt="Icono de MongoDB" />
                       <p>MongoDB</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoMySql} alt="Icono de MySQL" />
                       <p>MySQL</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoPostgres} alt="Icono de PostgreSQL" />
                       <p>PostgreSQL</p>
                     </div>
-                    <div className="skill">
-                      <img src={logoBootstrap} alt="Icono de Bootstrap 4" />
-                      <p>Bootstrap 4</p>
-                    </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoWebpack} alt="Icono de Webpack" />
                       <p>Webpack</p>
                     </div>
-                    <div className="skill">
+                    <div className="skill responsive-flex-column">
                       <img src={logoGithub} alt="Icono de Github" />
                       <p>Github</p>
                     </div>

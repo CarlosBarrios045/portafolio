@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ location }) => {
   useEffect(() => {
     const nav = document.getElementById("nav");
 
@@ -46,9 +46,11 @@ const Navbar = () => {
         <li>
           <Link to="/">Inicio</Link>
         </li>
-        <li>
-          <Link to="/#skills">Habilidades</Link>
-        </li>
+        { location.pathname === "/" ? (
+          <li>
+            <a href="#skills">habilidades</a>
+          </li>
+        ) : null }
         <li>
           <Link to="/projects">Proyectos</Link>
         </li>
@@ -60,4 +62,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);
