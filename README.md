@@ -1,6 +1,6 @@
 # portafolio
-Mi Portafolio en el cual muestro todos mis proyectos.
+Mi Portafolio. (hecho en React)
 
 ```
-Link del deployment: https://juanbarrios.netlify.com/
+Link del Deployment: https://juanbarrios.netlify.com/
 ```

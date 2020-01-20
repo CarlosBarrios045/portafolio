@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 
 // Image
 import imagen from "../img/profile.jpg";
+import cv from "../img/cv.png";
 
 // Logos
 import logoHtml from "../img/logos/icono_html.jpg";
@@ -19,6 +20,81 @@ import logoSass from "../img/logos/icono_sass.svg";
 import logoNode from "../img/logos/icono_node.png";
 
 const Index = () => {
+  const TechnologiesP = [
+    {
+      name: "HTML5",
+      logo: logoHtml,
+      alt: "Icono de HTML5"
+    },
+    {
+      name: "CSS3",
+      logo: logoCss,
+      alt: "Icono de CSS3"
+    },
+    {
+      name: "SASS",
+      logo: logoSass,
+      alt: "Icono de SASS"
+    },
+    {
+      name: "JavaScript",
+      logo: logoJs,
+      alt: "Icono de JavaScript"
+    },
+    {
+      name: "React",
+      logo: logoReact,
+      alt: "Icono de React"
+    },
+    {
+      name: "Redux",
+      logo: logoRedux,
+      alt: "Icono de Redux"
+    }
+  ];
+
+  const TechnologiesS = [
+    {
+      name: "React Native",
+      logo: logoReact,
+      alt: "Icono de React Native"
+    },
+    {
+      name: "Node",
+      logo: logoNode,
+      alt: "Icono de Node"
+    },
+    {
+      name: "Express",
+      logo: logoExpress,
+      alt: "Icono de Express"
+    },
+    {
+      name: "MongoDB",
+      logo: logoMongo,
+      alt: "Icono de MongoDB"
+    },
+    {
+      name: "MySQL",
+      logo: logoMySql,
+      alt: "Icono de MySQL"
+    },
+    {
+      name: "PostgreSQL",
+      logo: logoPostgres,
+      alt: "Icono de PostgreSQL"
+    },
+    {
+      name: "Webpack",
+      logo: logoWebpack,
+      alt: "Icono de Webpack"
+    },
+    {
+      name: "Github",
+      logo: logoGithub,
+      alt: "Icono de Github"
+    }
+  ];
 
   return (
     <Fragment>
@@ -50,6 +126,10 @@ const Index = () => {
             Soy un Front End Developer con algunos conocimientos de Backend,
             siendo mi Stack el de MERN (MongoDB, Express, React, Node).
           </p>
+          <p>
+            Si te interesa ver mi Currículum, acá te lo dejo.
+          </p>
+          <a href={cv} target="_blank" className="btn-cv">Ver Currículum</a>
         </div>
 
         <div className="skills" id="skills">
@@ -65,30 +145,12 @@ const Index = () => {
                   <h3>Tecnologías principales</h3>
 
                   <div className="grid-skills responsive-flex-column">
-                    <div className="skill responsive-flex-column">
-                      <img src={logoHtml} alt="Icono de HTML5" />
-                      <p>HTML5</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoCss} alt="Icono de CSS3" />
-                      <p>CSS3</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoSass} alt="Icono de SASS" />
-                      <p>SASS</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoJs} alt="Icono de JavaScript" />
-                      <p>JavaScript</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoReact} alt="Icono de React" />
-                      <p>React</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoRedux} alt="Icono de Redux" />
-                      <p>Redux</p>
-                    </div>
+                    {TechnologiesP.map(tech => (
+                      <div className="skill responsive-flex-column">
+                        <img src={tech.logo} alt={tech.alt} />
+                        <p>{tech.name}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
@@ -96,34 +158,12 @@ const Index = () => {
                   <h3>Tecnologías adicionales</h3>
 
                   <div className="grid-skills responsive-flex-column">
-                    <div className="skill responsive-flex-column">
-                      <img src={logoNode} alt="Icono de Node" />
-                      <p>NodeJS</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoExpress} alt="Icono de Express" />
-                      <p>Express</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoMongo} alt="Icono de MongoDB" />
-                      <p>MongoDB</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoMySql} alt="Icono de MySQL" />
-                      <p>MySQL</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoPostgres} alt="Icono de PostgreSQL" />
-                      <p>PostgreSQL</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoWebpack} alt="Icono de Webpack" />
-                      <p>Webpack</p>
-                    </div>
-                    <div className="skill responsive-flex-column">
-                      <img src={logoGithub} alt="Icono de Github" />
-                      <p>Github</p>
-                    </div>
+                  {TechnologiesS.map(tech => (
+                      <div className="skill responsive-flex-column">
+                        <img src={tech.logo} alt={tech.alt} />
+                        <p>{tech.name}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
