@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
 // Image
-import imagen from "../img/profile.jpg";
+import imagen from "../img/profile.jpeg";
 import cv from "../img/cv.png";
 
 // Logos
