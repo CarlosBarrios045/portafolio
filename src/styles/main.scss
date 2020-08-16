@@ -5,6 +5,7 @@ $font-oswald: "Oswald", sans-serif;
 
 $color-primary: #3e4756;
 $color-secondary: #2d93e4;
+$color-terceary: #fff;
 
 @keyframes moveInLeft {
   0% {
@@ -97,13 +98,18 @@ $color-secondary: #2d93e4;
 body {
   width: 100%;
   font-size: 62.5%;
-  height: 2000px;
+  min-height: 100vh;
   font-family: $font-montserrat;
   color: #fff;
   background-color: $color-primary;
 }
 
 .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container2 {
   width: 80%;
   margin: 0 auto;
 }
@@ -168,6 +174,7 @@ ul {
 .navbar {
   margin-top: -1px;
   width: 100%;
+  min-height: 70px;
   position: fixed;
   top: 0;
   left: 0;
@@ -175,6 +182,7 @@ ul {
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   transition: ease-in-out 0.4s;
   animation: moveInLeft 0.5s ease;
 
@@ -213,14 +221,14 @@ ul {
 
   & .img {
     width: 26rem;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: ease 0.3s;
     animation: moveInLeft 0.5s ease;
   }
 
   & .img:hover {
     transform: translateY(-4px);
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
   }
 
   & .info-profile {
@@ -236,8 +244,7 @@ ul {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 }
@@ -256,7 +263,10 @@ ul {
 .barra {
   height: 2px;
   widows: 20px;
-  margin-bottom: 1.5rem;
+}
+
+.description {
+  margin: 1.5rem 0;
 }
 
 /* Skills */
@@ -274,6 +284,7 @@ ul {
 
   & .technologies {
     width: 100%;
+    margin-top: 1.5rem;
     background-color: $color-primary;
     -webkit-clip-path: polygon(0 0, 87% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 0, 87% 0, 100% 100%, 0% 100%);
@@ -335,13 +346,17 @@ footer {
   background-position: top;
 
   .footer {
-    padding-top: 30px;
+    padding-top: 40px;
     display: flex;
     justify-content: space-between;
   }
 
   & .contact h2 {
-    margin-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  & .contact h3 {
+    margin-bottom: 0.5rem;
   }
 
   & .contact h3 i {
@@ -453,7 +468,6 @@ footer {
     color: $color-primary;
     width: 40%;
     padding: 2rem;
-    padding-left: 1rem;
     transition: ease 0.5s;
 
     & h2 {
@@ -484,7 +498,7 @@ footer {
       & a,
       & a:visited {
         background-color: $color-primary;
-        padding: 1rem 2rem;
+        padding: 0.8rem 3rem;
         margin-right: 2rem;
         color: #fff;
         border-radius: 2px;
@@ -497,7 +511,6 @@ footer {
 
       & a:hover {
         background-color: #323741;
-        transform: translateY(-2px);
         color: #fff;
       }
     }
@@ -554,10 +567,12 @@ footer {
     }
 
     & .nav-header {
+      min-height: 70px;
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
   }
 
@@ -646,7 +661,7 @@ footer {
     /* Card-body */
     & .card-body {
       width: 80%;
-      padding-top: -2rem;
+      padding: 2rem 0.5rem;
       text-align: left;
       margin: 0;
 
@@ -661,6 +676,10 @@ footer {
         margin-top: 1rem;
       }
     }
+  }
+
+  .container2 {
+    width: 95%;
   }
 }
 

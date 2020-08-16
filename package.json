@@ -4,7 +4,7 @@
   "description": "Configuración de webpack para react",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server -d",
+    "dev": "webpack-dev-server -d",
     "build": "webpack -p"
   },
   "author": "Juan Carlos Barrios Sánchez",
@@ -29,8 +29,10 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-icons": "^3.10.0",
     "react-router-dom": "^5.1.2"
   }
 }

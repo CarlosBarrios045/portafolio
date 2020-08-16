@@ -1,40 +1,40 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "bundle.js",
-    publicPath: '/'
+    publicPath: "/",
   },
   devServer: {
     port: 3000,
     historyApiFallback: true,
-    open: true
+    open: true,
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx"],
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.html$/,
         use: [
           {
             loader: "html-loader",
-            options: { minimize: true }
-          }
-        ]
+            options: { minimize: true },
+          },
+        ],
       },
       {
         test: /\.(jpg|jpeg|png|gif|ico|svg|webp)$/i,
@@ -44,58 +44,63 @@ module.exports = {
             options: {
               outputPath: "assets",
               name: "images/[name]-[hash].[ext]",
-              limit: 8192
-            }
+              limit: 8192,
+            },
           },
           {
             loader: "image-webpack-loader",
             options: {
-              bypassOnDebug: true
-            }
-          }
-        ]
+              bypassOnDebug: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/i,
         use: [
-          { loader: 'style-loader' },
+          { loader: "style-loader" },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
-              sourceMap: true
-            }
-          }
-        ]
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(scss|sass)$/i,
-        use: [{ loader: 'style-loader' }, {
-          loader: 'css-loader',
-          options: {
-            sourceMap: true
-          }
-        }, {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true
-          }
-        }]
-      }
-    ]
+        use: [
+          { loader: "style-loader" },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html"
+      template: "./public/index.html",
+      favicon: "public/favicon.ico",
     }),
     new FaviconsWebpackPlugin({
-      logo: './public/favicon.png',
-      prefix: 'favicons/',
+      logo: "./public/favicon.ico",
+      prefix: "favicons/",
       emitStats: false,
-      statsFilename: 'faviconstats-[hash].json',
+      statsFilename: "faviconstats-[hash].json",
       persistentCache: true,
       inject: true,
-      background: '#fff',
-      title: 'React - Webpack - Config',
+      background: "#fff",
+      title: "React - Webpack - Config",
       icons: {
         android: false,
         appleIcon: false,
@@ -106,8 +111,8 @@ module.exports = {
         opengraph: false,
         twitter: false,
         yandex: false,
-        windows: false
-      }
-    })
-  ]
+        windows: false,
+      },
+    }),
+  ],
 };

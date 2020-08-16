@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
 
+// Material UI
+import { Button } from "@material-ui/core";
+
 const Projects = () => {
   const projects = [
     {
@@ -8,12 +11,12 @@ const Projects = () => {
         "Es una aplicación la cual trata de una biblioteca hecha con React, Redux y Firebase. En ella puedes crear, editar y eliminar suscriptores los cuales son los solicitantes a libros, como también puedes crear, editar y eliminar libros.",
       login: {
         email: "correo@correo.com",
-        password: "123123"
+        password: "123123",
       },
       links: {
         github: "https://github.com/CarlosBarrios045/bibliostore",
-        demo: "https://bibliostore-react.netlify.com/"
-      }
+        demo: "https://bibliostore-react.netlify.com/",
+      },
     },
     {
       name: "Mini CRM",
@@ -21,12 +24,12 @@ const Projects = () => {
         "Es una aplicación donde puedes crear, editar o eliminar clientes, así mismo productos y poder llevar un control de tus pedidos. Fue hecho con React, Node, Express y Mongo (MERN).",
       login: {
         email: "correo@correo.com",
-        password: "123"
+        password: "123",
       },
       links: {
         github: "https://github.com/CarlosBarrios045/crm-mern",
-        demo: "https://crm-mern.netlify.com/"
-      }
+        demo: "https://crm-mern.netlify.com/",
+      },
     },
     {
       name: "Buscador de Letras de Canciones",
@@ -34,8 +37,8 @@ const Projects = () => {
         "Está aplicación te ayuda a buscar las letras de tus canciones favoritas, y adeamás te muestra una pequeña biografía del autor de la canción. Fue hecho con React, consumiendo la API de Lyrics.",
       links: {
         github: "https://github.com/CarlosBarrios045/musica-react",
-        demo: "https://trusting-almeida-1e3972.netlify.com/"
-      }
+        demo: "https://trusting-almeida-1e3972.netlify.com/",
+      },
     },
     {
       name: "Criptomonedas",
@@ -43,16 +46,16 @@ const Projects = () => {
         "Es un cotizador de Criptomonedas, donde escoges la moneda de tu país (o la que desees), seleccionas la criptomoneda a cotizar y luego tendrás tu cotización. Fue hecho con React Hooks, y la API de Cripto Compare.",
       links: {
         github: "https://github.com/CarlosBarrios045/Criptomonedas",
-        demo: "https://cripto-react.netlify.com/"
-      }
+        demo: "https://cripto-react.netlify.com/",
+      },
     },
     {
       name: "Juego de Memoria",
       description: "Es el tradicional juego de memorias hecho con React-Hooks.",
       links: {
         github: "https://github.com/CarlosBarrios045/memorias-react",
-        demo: "https://memorias-react.netlify.com/"
-      }
+        demo: "https://memorias-react.netlify.com/",
+      },
     },
     {
       name: "Buscador de Eventos",
@@ -60,8 +63,8 @@ const Projects = () => {
         "Es un buscador de eventos, puedes buscar por categoría y/o el nombre de eventos que desees buscar. Fue hecho con React y la API de EventBrite.",
       links: {
         github: "https://github.com/CarlosBarrios045/react-eventos",
-        demo: "https://serene-bardeen-0f05d1.netlify.com/"
-      }
+        demo: "https://serene-bardeen-0f05d1.netlify.com/",
+      },
     },
     {
       name: "Buscador de imagenes",
@@ -69,9 +72,9 @@ const Projects = () => {
         "Es un buscador de imagenes hecho con React y la API de Pixabay.",
       links: {
         github: "https://github.com/CarlosBarrios045/react-pixabay",
-        demo: "https://buscarimg-react.netlify.com/"
-      }
-    }
+        demo: "https://buscarimg-react.netlify.com/",
+      },
+    },
   ];
 
   return (
@@ -92,9 +95,9 @@ const Projects = () => {
             <div className="barra"></div>
           </div>
 
-          <div className="d-flex">
-            {projects.map(({name, description, login, links}) => (
-              <div className="card responsive-flex-column">
+          <div className="d-flex" style={{ marginTop: "1.5rem" }}>
+            {projects.map(({ name, description, login, links }, i) => (
+              <div className="card responsive-flex-column" key={i}>
                 <div className="card-image"></div>
 
                 <div className="card-body">
@@ -114,18 +117,20 @@ const Projects = () => {
                   )}
 
                   <nav>
-                    <a
+                    <Button
+                      variant="contained"
                       href={links.github}
                       target="_blank"
                     >
                       Github
-                    </a>
-                    <a
+                    </Button>
+                    <Button
+                      variant="contained"
                       href={links.demo}
                       target="_blank"
                     >
                       Demo
-                    </a>
+                    </Button>
                   </nav>
                 </div>
               </div>

@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaLinkedin,
+  FaWhatsappSquare,
+  FaEnvelope,
+  FaMobileAlt,
+} from "react-icons/fa";
 
 const Footer = () => (
   <footer id="contact">
@@ -7,17 +15,28 @@ const Footer = () => (
         <ul>
           <li>
             <a href="https://www.facebook.com/wcarlitow" target="_blank">
-              <i className="fab fa-facebook-square"></i>
+              <FaFacebookSquare size={50} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=584121556808&text=Hola,%20¿qué%20tal%20estás?"
+              target="_blank"
+            >
+              <FaWhatsappSquare size={50} />
             </a>
           </li>
           <li>
             <a href="https://www.github.com/CarlosBarrios045" target="_blank">
-              <i className="fab fa-github-square"></i>
+              <FaGithubSquare size={50} />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/carlosbarrios045" target="_blank">
-              <i className="fab fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/carlosbarrios045"
+              target="_blank"
+            >
+              <FaLinkedin size={50} />
             </a>
           </li>
         </ul>
@@ -26,10 +45,10 @@ const Footer = () => (
       <div className="contact">
         <h2>Juan Carlos Barrios Sánchez</h2>
         <h3>
-          <i className="fas fa-envelope"></i> juanbarrios045@gmail.com
+          <FaEnvelope /> juanbarrios045@gmail.com
         </h3>
         <h3>
-          <i className="fas fa-mobile-alt"></i> +58412 - 1556808
+          <FaMobileAlt /> +58412 - 1556808
         </h3>
         <h3>Estado Portuguesa - Venezuela.</h3>
       </div>
